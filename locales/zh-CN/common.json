@@ -1,6 +1,6 @@
 {
   "reactions": {
-    "other": "{{count}} 个反应"
+    "other": "{{count}} 个表情"
   },
   "comment": "评论",
   "comments": {
@@ -19,9 +19,9 @@
   "genericError": "发生错误： {{message}}",
   "loadMore": "加载更多",
   "loading": "加载中",
-  "loadingComments": "正在加载评论……",
-  "loadingPreview": "正在加载预览……",
-  "poweredBy": "– 由 <a>giscus</a> 驱动",
+  "loadingComments": "正在加载评论 ……",
+  "loadingPreview": "正在加载预览 ……",
+  "poweredBy": "由 <a>giscus</a> 驱动",
   "oldest": "最旧",
   "newest": "最新",
   "showPreviousReplies": {
@@ -39,35 +39,35 @@
   "enableFixedWidth": "在编辑器中启用固定宽度（等宽）字体",
   "disableFixedWidth": "在编辑器中禁用固定宽度（等宽）字体",
   "lastEditedAt": "最后编辑于 {{date}}",
-  "writeAComment": "写评论",
+  "writeAComment": "添加评论 …",
   "signInToComment": "登录以评论",
   "stylingWithMarkdownIsSupported": "支持 Markdown",
   "cancel": "取消",
   "signInWithGitHub": "GitHub 登录",
-  "writeAReply": "写回复",
+  "writeAReply": "添加回复 …",
 
   "upvote": "赞同",
   "youMustBeSignedInToUpvote": "你必须登录才能投票。",
-  "addReactions": "添加反应",
-  "pleaseWait": "请稍候……",
-  "pickYourReaction": "选择你的反应",
+  "addReactions": "添加表情",
+  "pleaseWait": "请稍候 ……",
+  "pickYourReaction": "选择你的表情",
   "addTheReaction": "表示 {{reaction}}",
   "removeTheReaction": "取消表示 {{reaction}}",
-  "signInToAddYourReaction": "<a>登录</a>以添加反应。",
-  "youMustBeSignedInToAddReactions": "你必须登录才能添加反应。",
+  "signInToAddYourReaction": "<a>登录</a>以添加表情。",
+  "youMustBeSignedInToAddReactions": "你必须登录才能添加表情。",
   "peopleReactedWith": {
     "other": "{{count}} 人表示 {{reaction}}"
   },
-  "emoji": "emoji",
-  "nothingToPreview": "没有可以预览的",
+  "emoji": "Emoji",
+  "nothingToPreview": "无内容",
 
   "THUMBS_UP": "+1",
   "THUMBS_DOWN": "-1",
   "LAUGH": "大笑",
   "HOORAY": "好耶",
   "CONFUSED": "疑惑",
-  "HEART": "爱了",
-  "ROCKET": "上天",
+  "HEART": "喜欢",
+  "ROCKET": "起飞",
   "EYES": "看看",
 
   "COLLABORATOR": "合作者",

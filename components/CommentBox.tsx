@@ -256,7 +256,11 @@ export default function CommentBox({
         >
           <img
             className="inline-block rounded-full"
-            src={viewer.avatarUrl}
+            src={
+              process.env.NEXT_PUBLIC_GITHUB_AVATAR_MIRROR
+                ? process.env.NEXT_PUBLIC_GITHUB_AVATAR_MIRROR + viewer.login + '.png'
+                : viewer.avatarUrl
+            }
             width="30"
             height="30"
             alt={`@${viewer.login}`}

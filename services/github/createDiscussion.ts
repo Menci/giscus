@@ -28,6 +28,8 @@ export async function createDiscussion(
   token: string,
   params: CreateDiscussionBody,
 ): Promise<CreateDiscussionResponse> {
+  params.input.body = params.input.title;
+
   return fetch(GITHUB_GRAPHQL_API_URL, {
     method: 'POST',
     headers: {

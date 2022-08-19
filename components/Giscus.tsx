@@ -150,7 +150,7 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
               </>
             ) : null}
             {shouldShowBranding ? (
-              <em className="color-text-secondary text-sm">
+              <em className="text-sm color-text-secondary" style={{ fontStyle: 'normal', marginLeft: 'auto' }}>
                 <Trans
                   i18nKey="common:poweredBy"
                   components={{
@@ -168,7 +168,7 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
             ) : null}
           </div>
           {data.totalCommentCount > 0 ? (
-            <div className="gsc-right-header BtnGroup" role="listbox">
+            <div className="gsc-right-header BtnGroup" role="listbox" style={{ marginLeft: 16 }}>
               <button
                 className="btn BtnGroup-item"
                 aria-selected={orderBy === 'oldest'}

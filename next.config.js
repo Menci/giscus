@@ -70,3 +70,9 @@ module.exports = withBundleAnalyzer(
     }),
   ),
 );
+
+module.exports.eslint = module.exports.eslint || {};
+module.exports.eslint.ignoreDuringBuilds = true;
+
+module.exports.experimental = module.exports.experimental || {};
+module.exports.experimental.outputStandalone = true;

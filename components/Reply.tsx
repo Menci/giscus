@@ -36,7 +36,11 @@ export default function Reply({ reply, onReplyUpdate }: IReplyProps) {
           >
             <img
               className="rounded-full"
-              src={reply.author.avatarUrl}
+              src={
+                process.env.NEXT_PUBLIC_GITHUB_AVATAR_MIRROR
+                  ? process.env.NEXT_PUBLIC_GITHUB_AVATAR_MIRROR + reply.author.login + '.png'
+                  : reply.author.avatarUrl
+              }
               width="30"
               height="30"
               alt={`@${reply.author.login}`}
@@ -69,17 +73,6 @@ export default function Reply({ reply, onReplyUpdate }: IReplyProps) {
                     {formatDateDistance(reply.createdAt)}
                   </time>
                 </a>
-                {reply.authorAssociation !== 'NONE' ? (
-                  <div className="hidden text-xs ml-2 sm:inline-flex">
-                    <span
-                      className={`capitalize ml-1 rounded-md border px-1 ${
-                        reply.viewerDidAuthor ? 'color-box-border-info' : 'color-label-border'
-                      }`}
-                    >
-                      {t(reply.authorAssociation)}
-                    </span>
-                  </div>
-                ) : null}
               </div>
               <div className="flex">
                 {reply.lastEditedAt ? (

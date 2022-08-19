@@ -22,6 +22,8 @@ export const availableThemes = [
   'dark_tritanopia',
   'dark_dimmed',
   'transparent_dark',
+  'menci',
+  'menci-blog',
   'preferred_color_scheme',
   'custom',
 ] as const;

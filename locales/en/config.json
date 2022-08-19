@@ -71,6 +71,8 @@
   "theme=dark_tritanopia": "GitHub Dark Tritanopia",
   "theme=dark_dimmed": "GitHub Dark Dimmed",
   "theme=transparent_dark": "Transparent Dark",
+  "theme=menci": "Menci",
+  "theme=menci-blog": "Menci's Blog",
   "theme=preferred_color_scheme": "Preferred color scheme",
   "theme=custom": "Custom (experimental)",
 

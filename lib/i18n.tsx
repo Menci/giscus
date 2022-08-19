@@ -2,6 +2,7 @@ import { TransProps as NextTransProps } from 'next-translate';
 import NextTrans from 'next-translate/Trans';
 import useTranslation from 'next-translate/useTranslation';
 import { HTMLAttributes, useCallback } from 'react';
+import { fixChineseSpaceForFunction } from './utils';
 
 interface TranslationQuery {
   [name: string]: string | number;
@@ -237,13 +238,13 @@ export function useDateFormatter() {
   const { lang } = useTranslation('common');
   const intl: Intl.DateTimeFormat = dateFormatters[lang] ?? dateFormatters.en;
 
-  return useCallback(
+  return fixChineseSpaceForFunction(useCallback(
     (date: string | Date) => {
       const dateObj = typeof date === 'string' ? new Date(date) : date;
       return intl.format(dateObj);
     },
     [intl],
-  );
+  ));
 }
 
 interface FormatParamsDate {
@@ -280,7 +281,7 @@ export function useRelativeTimeFormatter() {
   const sdf: Intl.DateTimeFormat = shortDateFormatters[lang] ?? shortDateFormatters.en;
   const rtf: Intl.RelativeTimeFormat = relativeTimeFormatters[lang] ?? relativeTimeFormatters.en;
 
-  return useCallback(
+  return fixChineseSpaceForFunction(useCallback(
     (date: string | Date) => {
       const dateObj = typeof date === 'string' ? new Date(date) : date;
       const now = new Date();
@@ -299,5 +300,5 @@ export function useRelativeTimeFormatter() {
       return format({ format: rtf, value: -diffInSeconds, unit: 'second' });
     },
     [sdyf, sdf, rtf],
-  );
+  ));
 }

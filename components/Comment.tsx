@@ -87,7 +87,11 @@ export default function Comment({
               >
                 <img
                   className="mr-2 rounded-full"
-                  src={comment.author.avatarUrl}
+                  src={
+                    process.env.NEXT_PUBLIC_GITHUB_AVATAR_MIRROR
+                      ? process.env.NEXT_PUBLIC_GITHUB_AVATAR_MIRROR + comment.author.login + '.png'
+                      : comment.author.avatarUrl
+                  }
                   width="30"
                   height="30"
                   alt={`@${comment.author.login}`}
@@ -108,17 +112,6 @@ export default function Comment({
                   {formatDateDistance(comment.createdAt)}
                 </time>
               </a>
-              {comment.authorAssociation !== 'NONE' ? (
-                <div className="hidden text-xs ml-2 sm:inline-flex">
-                  <span
-                    className={`capitalize ml-1 rounded-md border px-1 ${
-                      comment.viewerDidAuthor ? 'color-box-border-info' : 'color-label-border'
-                    }`}
-                  >
-                    {t(comment.authorAssociation)}
-                  </span>
-                </div>
-              ) : null}
             </div>
             <div className="flex">
               {comment.lastEditedAt ? (
