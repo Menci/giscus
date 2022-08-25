@@ -5,3 +5,4 @@ npm-debug.log
 .next
 build.sh
 deploy.sh
+.env
